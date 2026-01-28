@@ -8,7 +8,7 @@ int	ft_str_is_alpha(char *str)
 		return (1);
 	while (str[i] != '\0')
 	{
-		if (!(str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
+		if (!((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z')))
 		{
 			return (0);
 		}
@@ -26,6 +26,10 @@ int	main(void)
 	char	yes[] = "testo";
 	char	no[] = "test0";
 	char	zero[] = "";
+
+	one = ft_str_is_alpha(yes);
+	two = ft_str_is_alpha(no);
+	three = ft_str_is_alpha(zero);
 
 	printf("%d\n", one);
 	printf("%d\n", two);
